@@ -3,7 +3,7 @@ module.exports = {
   extends: ['expo', '@rocketseat/eslint-config/react'],
   plugins: ['prettier'],
   ignorePatterns: ['/dist/*'],
-  ignorePatterns: ['.eslintrc.js'],
+  ignorePatterns: ['.eslintrc.js', 'jest.config.js'],
   parser: '@typescript-eslint/parser',
   rules: {
     'prettier/prettier': 'error',
