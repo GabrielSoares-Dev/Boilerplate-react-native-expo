@@ -6,7 +6,7 @@ export default function RootLayout() {
   return (
     <RootProvider>
       <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="(public)" options={{ headerShown: false }} />
       </Stack>
     </RootProvider>
   )

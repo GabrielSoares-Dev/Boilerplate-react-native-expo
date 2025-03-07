@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import { Button, ButtonLoading } from '@components'
 
-export default function Home() {
+export default function Login() {
   return (
     <View>
-      <Text>homedd</Text>
+      <Text>login</Text>
       <Button
         variant="primary"
         // onPress={handleSubmit(onSubmit)}
