@@ -6,11 +6,10 @@ import { loginSchema } from '@pages/public/login/schemas'
 import type { LoginFields } from '@pages/public/login/types'
 import { authService } from '@services'
 import type { LoginInput, LoginOutput } from '@services'
-// import { showToast } from '@functions'
-// import { ToastType, PrivateScreens } from '@enums'
+import { showToast } from '@functions'
 import { useAuthStore } from '@store'
 import { useNavigation } from '@hooks'
-import { PrivateScreens } from '@enums'
+import { PrivateScreens, ToastType } from '@enums'
 
 export function useLogin() {
   const { setAuthData } = useAuthStore()
@@ -26,11 +25,11 @@ export function useLogin() {
   }
 
   const onError = () => {
-    // showToast({
-    //   type: ToastType.ERROR,
-    //   title: 'Email ou senha inválida!',
-    //   description: 'Por favor tente novamente!',
-    // })
+    showToast({
+      type: ToastType.ERROR,
+      title: 'Email ou senha inválida!',
+      description: 'Por favor tente novamente!',
+    })
   }
 
   const { mutate: login, isPending: isLoading } = useMutation({

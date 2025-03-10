@@ -1,6 +1,6 @@
 import React, { act } from 'react'
 import { Login } from '@pages'
-// import Toast from 'react-native-toast-message'
+import Toast from 'react-native-toast-message'
 import {
   fireEvent,
   render,
@@ -58,7 +58,7 @@ describe('Login', () => {
     await waitFor(() => expect(getByTestId('eye-off-icon')).toBeVisible())
   })
 
-  it.only('Should be login successfully', async () => {
+  it('Should be login successfully', async () => {
     const mockNavigate = jest.fn()
     // @ts-expect-error
     useNavigation.mockReturnValue({ navigate: mockNavigate })
@@ -87,42 +87,42 @@ describe('Login', () => {
     const expectedSetAuthDataInput = {
       token: 'test-token',
     }
-    // expect(setAuthDataSpyOn).toHaveBeenCalledWith(expectedSetAuthDataInput)
-    // expect(mockNavigate).toHaveBeenCalledWith(PrivateScreens.HOME)
+    expect(setAuthDataSpyOn).toHaveBeenCalledWith(expectedSetAuthDataInput)
+    expect(mockNavigate).toHaveBeenCalledWith(PrivateScreens.HOME)
   })
 
-  // it('Should be login failed', async () => {
-  //   const mockNavigate = jest.fn()
-  //   // @ts-expect-error
-  //   useNavigation.mockReturnValue({ navigate: mockNavigate })
-  //   loginFailedMock()
-  //   const { result } = renderHook(() => useAuthStore())
-  //   const setAuthDataSpyOn = jest.spyOn(result.current, 'setAuthData')
-  //   const { getByPlaceholderText, getByText, findByText } = render(
-  //     <ReactQueryWrapper>
-  //       <ThemeWrapper>
-  //         <Login />
-  //         <Toast />
-  //       </ThemeWrapper>
-  //     </ReactQueryWrapper>,
-  //   )
+  it('Should be login failed', async () => {
+    const mockNavigate = jest.fn()
+    // @ts-expect-error
+    useNavigation.mockReturnValue({ navigate: mockNavigate })
+    loginFailedMock()
+    const { result } = renderHook(() => useAuthStore())
+    const setAuthDataSpyOn = jest.spyOn(result.current, 'setAuthData')
+    const { getByPlaceholderText, getByText, findByText } = render(
+      <ReactQueryWrapper>
+        <ThemeWrapper>
+          <Login />
+          <Toast />
+        </ThemeWrapper>
+      </ReactQueryWrapper>,
+    )
 
-  //   const emailInput = getByPlaceholderText('luis@outlook.com.br')
-  //   const passwordInput = getByPlaceholderText('********')
-  //   const loginButton = getByText('Entrar')
+    const emailInput = getByPlaceholderText('luis@outlook.com.br')
+    const passwordInput = getByPlaceholderText('********')
+    const loginButton = getByText('Entrar')
 
-  //   await act(async () => {
-  //     fireEvent.changeText(emailInput, 'luis@outlook.com.br')
-  //     fireEvent.changeText(passwordInput, 'password')
-  //     fireEvent.press(loginButton)
-  //   })
+    await act(async () => {
+      fireEvent.changeText(emailInput, 'luis@outlook.com.br')
+      fireEvent.changeText(passwordInput, 'password')
+      fireEvent.press(loginButton)
+    })
 
-  //   await waitFor(async () => {
-  //     const toast = await findByText('Email ou senha inválida!')
-  //     expect(toast).toBeTruthy()
-  //   })
+    await waitFor(async () => {
+      const toast = await findByText('Email ou senha inválida!')
+      expect(toast).toBeTruthy()
+    })
 
-  //   expect(setAuthDataSpyOn).not.toHaveBeenCalled()
-  //   expect(mockNavigate).not.toHaveBeenCalled()
-  // })
+    expect(setAuthDataSpyOn).not.toHaveBeenCalled()
+    expect(mockNavigate).not.toHaveBeenCalled()
+  })
 })

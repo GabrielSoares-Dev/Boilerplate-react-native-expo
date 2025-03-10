@@ -13,7 +13,7 @@ export function Login() {
     handleSubmit,
     onSubmit,
   } = useLogin()
-  console.log('aaaaaaaaaaaa', process.env.EXPO_PUBLIC_API_URL)
+
   return (
     <S.Container>
       <S.Title>Login</S.Title>

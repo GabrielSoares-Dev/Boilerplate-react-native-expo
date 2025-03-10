@@ -10,6 +10,11 @@ jest.mock('expo-font', () => {
   return module
 })
 
+jest.mock('@constants', () => ({
+  ...jest.requireActual('@constants'),
+  EXPO_PUBLIC_API_URL: 'https://www.test.com.br',
+}))
+
 beforeAll(() => server.listen())
 
 afterEach(() => {
