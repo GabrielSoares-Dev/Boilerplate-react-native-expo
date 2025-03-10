@@ -10,7 +10,7 @@ export const Container = styled.View`
 export const Title = styled.Text`
   font-size: 35px;
   color: #000;
-  font-weight: bold;
   text-align: center;
+  font-family: ${({ theme }) => theme.fonts.bold};
 `
 export const ButtonContainer = styled.View``

@@ -4,10 +4,9 @@ declare module 'styled-components/native' {
   export interface DefaultTheme {
     fonts: {
       regular: string
-      bold: string
-      semiBold: string
-      italic: string
       medium: string
+      semiBold: string
+      bold: string
     }
   }
 }

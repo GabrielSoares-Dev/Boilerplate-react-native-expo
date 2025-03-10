@@ -14,6 +14,7 @@
     "test:coverage:silent": "jest --collectCoverage --silent --maxWorkers=4 --forceExit"
   },
   "dependencies": {
+    "@expo-google-fonts/open-sans": "^0.2.3",
     "@expo/vector-icons": "^14.0.2",
     "@hookform/resolvers": "^4.1.3",
     "@react-navigation/bottom-tabs": "^7.2.0",

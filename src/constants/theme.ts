@@ -2,10 +2,9 @@ import { DefaultTheme } from 'styled-components/native'
 
 export const theme: DefaultTheme = {
     fonts: {
-        regular: 'OpenSans-Regular',
-        bold: 'OpenSans-Bold',
-        semiBold: 'OpenSans-SemiBold',
-        italic: 'OpenSans-Italic',
-        medium: 'OpenSans-Medium',
+        regular: 'OpenSans_400Regular',
+        medium: 'OpenSans_500Medium',
+        semiBold: 'OpenSans_600SemiBold',
+        bold: 'OpenSans_700Bold',
     },
 }
