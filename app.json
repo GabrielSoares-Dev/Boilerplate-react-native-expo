@@ -42,11 +42,11 @@
         "expo-font",
         {
           "fonts": [
-            "./src/assets/fonts/OpenSans-Regular",
-            "./src/assets/fonts/OpenSans-Bold",
-            "./src/assets/fonts/OpenSans-SemiBold",
-            "./src/assets/fonts/OpenSans-Italic",
-            "./src/assets/fonts/OpenSans-Medium"
+            "./src/assets/fonts/OpenSans-Regular.ttf",
+            "./src/assets/fonts/OpenSans-Bold.ttf",
+            "./src/assets/fonts/OpenSans-SemiBold.ttf",
+            "./src/assets/fonts/OpenSans-Italic.ttf",
+            "./src/assets/fonts/OpenSans-Medium.ttf"
           ]
         }
       ]

@@ -13,7 +13,6 @@ export const Button = styled.TouchableOpacity<{ variant: ButtonVariant }>`
   width: 100%;
   flex-direction: row;
   gap: 10px;
-  font-family: ${({ theme }) => theme.fonts.semiBold};
 `
 
 export const Label = styled.Text<{ variant: ButtonVariant }>`
