@@ -37,6 +37,18 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./src/assets/fonts/OpenSans-Regular",
+            "./src/assets/fonts/OpenSans-Bold",
+            "./src/assets/fonts/OpenSans-SemiBold",
+            "./src/assets/fonts/OpenSans-Italic",
+            "./src/assets/fonts/OpenSans-Medium"
+          ]
+        }
       ]
     ],
     "experiments": {
