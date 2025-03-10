@@ -6,14 +6,17 @@
       "@src/*": [
         "./src/*"
       ],
-      "@app/*": [
-        "./src/app/*"
-      ],
       "@tests/*": [
         "./tests/*"
       ],
       "@components": [
         "./src/components"
+      ],
+      "@pages": [
+        "./src/pages"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
       ],
       "@enums": [
         "./src/enums"
@@ -26,6 +29,9 @@
       ],
       "@services": [
         "./src/services"
+      ],
+      "@storages": [
+        "./src/storages"
       ],
       "@store": [
         "./src/store"
@@ -52,6 +58,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts",
+    "expo-env.d.ts"
   ]
 }
