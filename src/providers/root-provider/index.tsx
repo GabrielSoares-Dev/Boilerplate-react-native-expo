@@ -9,10 +9,8 @@ const queryClient = new QueryClient()
 export function RootProvider({ children }: RootProviderProps) {
   return (
     <ThemeProvider theme={theme}>
-      <QueryClientProvider client={queryClient}>
-        <Toast />
-        {children}
-      </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+      <Toast />
     </ThemeProvider>
   )
 }
