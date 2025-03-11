@@ -1,0 +1,12 @@
+name: BUILD - APK
+on:
+  workflow_dispatch:
+jobs:
+  react_native_expo:
+    name: build apk
+    uses: GabrielSoares-Dev/workflows/.github/workflows/react-native-expo-build-apk.yml@master
+    with:
+      node_version: '22.x'
+      java_version: '17'
+    secrets:
+      expo_token: ${{secrets.EXPO_TOKEN}}
