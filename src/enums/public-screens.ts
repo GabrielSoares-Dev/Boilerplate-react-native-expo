@@ -1,3 +1,3 @@
 export enum PublicScreens {
-  LOGIN = '(public)',
+  LOGIN = '/login',
 }

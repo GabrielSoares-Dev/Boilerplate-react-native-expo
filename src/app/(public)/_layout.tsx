@@ -1,9 +1,10 @@
+import { PublicGuard } from '@guards'
 import { Stack } from 'expo-router'
 
 export default function PublicLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-    </Stack>
+    <PublicGuard>
+      <Stack screenOptions={{ headerShown: false }} />
+    </PublicGuard>
   )
 }

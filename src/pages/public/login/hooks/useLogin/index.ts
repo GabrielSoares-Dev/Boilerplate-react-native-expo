@@ -13,7 +13,7 @@ import { PrivateScreens, ToastType } from '@enums'
 
 export function useLogin() {
   const { setAuthData } = useAuthStore()
-  const { navigate } = useNavigation()
+  const { replace } = useNavigation()
   const [passwordIsEncrypted, setPasswordIsEncrypted] = useState(true)
   const { control, handleSubmit } = useForm<LoginFields>({
     resolver: zodResolver(loginSchema),
@@ -21,7 +21,7 @@ export function useLogin() {
 
   const onSuccess = (input: LoginOutput) => {
     setAuthData(input)
-    navigate(PrivateScreens.HOME)
+    replace(PrivateScreens.HOME)
   }
 
   const onError = () => {

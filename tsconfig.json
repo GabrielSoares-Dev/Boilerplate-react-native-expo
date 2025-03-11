@@ -24,11 +24,20 @@
       "@functions": [
         "./src/functions"
       ],
+      "@guards": [
+        "./src/guards"
+      ],
+      "@guards/*": [
+        "./src/guards/*"
+      ],
       "@providers": [
         "./src/providers"
       ],
       "@services": [
         "./src/services"
+      ],
+      "@services/*": [
+        "./src/services/*"
       ],
       "@storages": [
         "./src/storages"

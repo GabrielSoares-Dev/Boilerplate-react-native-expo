@@ -1,9 +1,10 @@
 import { Stack } from 'expo-router'
+import { PrivateGuard } from '@guards'
 
 export default function PrivateLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-    </Stack>
+    <PrivateGuard>
+      <Stack screenOptions={{ headerShown: false }} />
+    </PrivateGuard>
   )
 }

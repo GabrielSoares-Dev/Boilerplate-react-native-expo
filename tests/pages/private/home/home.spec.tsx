@@ -7,7 +7,7 @@ import { useNavigation } from '@hooks'
 import { PublicScreens } from '@enums'
 
 jest.mock('@hooks', () => ({
-  useNavigation: jest.fn().mockImplementation(() => ({ navigate: jest.fn() })),
+  useNavigation: jest.fn().mockImplementation(() => ({ replace: jest.fn() })),
 }))
 
 describe('Home', () => {
@@ -24,9 +24,9 @@ describe('Home', () => {
   })
 
   it('Should be press button and logout', async () => {
-    const mockNavigate = jest.fn()
+    const mockReplace = jest.fn()
     // @ts-expect-error
-    useNavigation.mockReturnValue({ navigate: mockNavigate })
+    useNavigation.mockReturnValue({ replace: mockReplace })
     const { result } = renderHook(() => useAuthStore())
     const cleanAuthDataSpyOn = jest.spyOn(result.current, 'cleanAuthData')
     const { getByText } = render(
@@ -42,6 +42,6 @@ describe('Home', () => {
     })
 
     expect(cleanAuthDataSpyOn).toHaveBeenCalled()
-    expect(mockNavigate).toHaveBeenCalledWith(PublicScreens.LOGIN)
+    expect(mockReplace).toHaveBeenCalledWith(PublicScreens.LOGIN)
   })
 })

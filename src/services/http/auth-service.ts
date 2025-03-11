@@ -1,4 +1,4 @@
-import { api } from '@services'
+import { api } from '@services/apis'
 import type { LoginInput, LoginOutput, LoginResponse } from '@services'
 
 export const authService = {

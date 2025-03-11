@@ -1,3 +1,3 @@
 export enum PrivateScreens {
-  HOME = '(private)',
+  HOME = '/home',
 }

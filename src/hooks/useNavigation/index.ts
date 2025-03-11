@@ -9,12 +9,17 @@ export function useNavigation() {
     router.navigate(screen as unknown as RelativePathString)
   }
 
+  const replace = (screen: PublicScreens | PrivateScreens) => {
+    router.replace(screen as unknown as RelativePathString)
+  }
+
   const goBack = () => {
     router.back()
   }
 
   return {
     navigate,
+    replace,
     goBack,
   }
 }

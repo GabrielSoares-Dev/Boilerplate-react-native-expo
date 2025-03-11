@@ -18,7 +18,7 @@ import { useNavigation } from '@hooks'
 import { PrivateScreens } from '@enums'
 
 jest.mock('@hooks', () => ({
-  useNavigation: jest.fn().mockImplementation(() => ({ navigate: jest.fn() })),
+  useNavigation: jest.fn().mockImplementation(() => ({ replace: jest.fn() })),
 }))
 
 describe('Login', () => {
@@ -59,9 +59,9 @@ describe('Login', () => {
   })
 
   it('Should be login successfully', async () => {
-    const mockNavigate = jest.fn()
+    const mockReplace = jest.fn()
     // @ts-expect-error
-    useNavigation.mockReturnValue({ navigate: mockNavigate })
+    useNavigation.mockReturnValue({ replace: mockReplace })
 
     loginSuccessfullyMock()
     const { result } = renderHook(() => useAuthStore())
@@ -88,13 +88,13 @@ describe('Login', () => {
       token: 'test-token',
     }
     expect(setAuthDataSpyOn).toHaveBeenCalledWith(expectedSetAuthDataInput)
-    expect(mockNavigate).toHaveBeenCalledWith(PrivateScreens.HOME)
+    expect(mockReplace).toHaveBeenCalledWith(PrivateScreens.HOME)
   })
 
   it('Should be login failed', async () => {
-    const mockNavigate = jest.fn()
+    const mockReplace = jest.fn()
     // @ts-expect-error
-    useNavigation.mockReturnValue({ navigate: mockNavigate })
+    useNavigation.mockReturnValue({ replace: mockReplace })
     loginFailedMock()
     const { result } = renderHook(() => useAuthStore())
     const setAuthDataSpyOn = jest.spyOn(result.current, 'setAuthData')
@@ -123,6 +123,6 @@ describe('Login', () => {
     })
 
     expect(setAuthDataSpyOn).not.toHaveBeenCalled()
-    expect(mockNavigate).not.toHaveBeenCalled()
+    expect(mockReplace).not.toHaveBeenCalled()
   })
 })

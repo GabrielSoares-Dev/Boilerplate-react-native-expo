@@ -7,11 +7,13 @@ export const Container = styled.View`
 export const InputContainer = styled.View<{ hasError?: boolean }>`
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   border-width: 1px;
   border-color: ${({ hasError }) => (hasError ? 'red' : '#007bff')};
   border-radius: 5px;
   padding: 0 10px;
   background-color: #fff;
+  height: 45px;
 `
 
 export const LeftIconContainer = styled.View`

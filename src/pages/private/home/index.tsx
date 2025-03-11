@@ -6,11 +6,11 @@ import * as S from './styles'
 
 export function Home() {
   const { cleanAuthData } = useAuthStore()
-  const { navigate } = useNavigation()
+  const { replace } = useNavigation()
 
   const logout = () => {
     cleanAuthData()
-    navigate(PublicScreens.LOGIN)
+    replace(PublicScreens.LOGIN)
   }
   return (
     <S.Container>
