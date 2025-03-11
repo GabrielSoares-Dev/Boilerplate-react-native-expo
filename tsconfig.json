@@ -60,7 +60,8 @@
     },
     "types": [
       "jest",
-      "@types/styled-components-react-native"
+      "@types/styled-components-react-native",
+      "node"
     ],
   },
   "include": [
