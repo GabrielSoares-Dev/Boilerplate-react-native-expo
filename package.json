@@ -7,7 +7,7 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "build:apk": "npx eas build -p android --profile build:apk --local",
+    "build:apk": "eas build -p android --profile build:apk --local",
     "typecheck": "npx tsc",
     "lint:test": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
