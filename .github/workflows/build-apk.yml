@@ -8,5 +8,7 @@ jobs:
     with:
       node_version: '22.x'
       java_version: '17'
+      env_content: |
+        API_URL=https://api.life-control.com.br
     secrets:
       expo_token: ${{secrets.EXPO_TOKEN}}
