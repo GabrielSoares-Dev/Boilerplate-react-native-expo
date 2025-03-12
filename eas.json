@@ -9,9 +9,6 @@
       "distribution": "internal"
     },
     "build:apk": {
-      "env": {
-        "EAS_LOCAL_BUILD_ARTIFACTS_DIR": "./"
-      },
       "android": {
         "gradleCommand": ":app:assembleRelease --parallel --daemon --max-workers=4"
       }
