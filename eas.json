@@ -11,6 +11,9 @@
     "build:apk": {
       "android": {
         "gradleCommand": ":app:assembleRelease --parallel --daemon --max-workers=4"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api.life-control.com.br"
       }
     },
     "production": {
