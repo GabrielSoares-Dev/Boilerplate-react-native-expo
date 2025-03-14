@@ -1,50 +1,83 @@
-# Welcome to your Expo app 👋
+# Expo Boilerplate
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This repository provides a complete setup for Expo applications, pre-configured with essential libraries, tools, and configurations to streamline development.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Navigation**: React Navigation for efficient routing.
+- **State Management**: Zustand for global state control.
+- **Forms & Validation**: React Hook Form combined with Zod for validation.
+- **API Management**: Axios for HTTP requests, React Query for data caching.
+- **Authentication**: Basic authentication setup with token management.
+- **UI Components**: Pre-configured with React Native Vector Icons.
+- **Styling**: Styled-components for component-based styling.
+- **Testing**: Jest setup with React Native Testing Library.
 
-   ```bash
-   npm install
-   ```
+## Dependencies
 
-2. Start the app
+### Core Dependencies
 
-   ```bash
-    npx expo start
-   ```
+- `expo`: Framework for React Native development.
+- `@react-navigation/native`: Navigation management.
+- `@react-navigation/native-stack`: Stack navigation.
+- `axios`: Handles HTTP requests.
+- `zustand`: State management.
+- `react-hook-form`, `zod`: Form handling and validation.
+- `react-native-toast-message`: Displays toast messages.
+- `styled-components`: Component-based styling.
+- `@tanstack/react-query`: Data caching and management.
+- `@react-native-async-storage/async-storage`: Secure local storage.
 
-In the output, you'll find options to open the app in a
+## Setup
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1. Clone the Repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/GabrielSoares-Dev/Boilerplate-expo.git
+cd Boilerplate-expo
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install Dependencies
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Run the Project
+To start the development server:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm run start
+```
 
-## Join the community
+To run on Android:
 
-Join our community of developers creating universal apps.
+```bash
+npm run android
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+To run on iOS:
+
+```bash
+npm run ios
+```
+
+To run on the web:
+
+```bash
+npm run web
+```
+
+### Available Commands
+
+- **`npm run start`**: Starts the Metro bundler.
+- **`npm run android`**: Builds and runs the app on Android.
+- **`npm run ios`**: Builds and runs the app on iOS.
+- **`npm run web`**: Runs the app on the web.
+- **`npm run build:apk`**: Generates an APK locally.
+- **`npm run typecheck`**: Runs TypeScript type checking.
+- **`npm run lint:test`**: Lints project files with ESLint.
+- **`npm run lint:fix`**: Automatically fixes linting issues.
+- **`npm run test`**: Runs unit tests using Jest.
+- **`npm run test:coverage`**: Runs tests and generates a coverage report.
+- **`npm run test:coverage:silent`**: Runs tests and generates a coverage re
