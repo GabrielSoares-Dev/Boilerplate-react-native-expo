@@ -32,8 +32,8 @@ This repository provides a complete setup for Expo applications, pre-configured 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/GabrielSoares-Dev/Boilerplate-expo.git
-cd Boilerplate-expo
+git clone https://github.com/GabrielSoares-Dev/Boilerplate-react-native-expo.git
+cd Boilerplate-react-native-expo
 ```
 
 ### 2. Install Dependencies
