@@ -17,7 +17,7 @@ export function Login() {
   console.log(envTest)
   return (
     <S.Container>
-      <S.Title>{envTest.EXPO_PUBLIC_API_URL || 'NAO ROLOU'}</S.Title>
+      <S.Title>{process.env.EXPO_PUBLIC_API_URL || 'NAO ROLOU'}</S.Title>
       <S.Title>Login</S.Title>
       <Input<LoginFields>
         label={<InputLabel label="E-mail" />}
