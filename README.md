@@ -4,7 +4,7 @@ This repository provides a complete setup for Expo applications, pre-configured 
 
 ## Features
 
-- **Navigation**: React Navigation for efficient routing.
+- **Navigation**: Expo router for efficient routing.
 - **State Management**: Zustand for global state control.
 - **Forms & Validation**: React Hook Form combined with Zod for validation.
 - **API Management**: Axios for HTTP requests, React Query for data caching.
@@ -18,15 +18,14 @@ This repository provides a complete setup for Expo applications, pre-configured 
 ### Core Dependencies
 
 - `expo`: Framework for React Native development.
-- `@react-navigation/native`: Navigation management.
-- `@react-navigation/native-stack`: Stack navigation.
+- `expo-router`: Navigation management.
 - `axios`: Handles HTTP requests.
 - `zustand`: State management.
 - `react-hook-form`, `zod`: Form handling and validation.
 - `react-native-toast-message`: Displays toast messages.
 - `styled-components`: Component-based styling.
 - `@tanstack/react-query`: Data caching and management.
-- `@react-native-async-storage/async-storage`: Secure local storage.
+- `react-native-mmkv`: Secure local storage.
 
 ## Setup
 
