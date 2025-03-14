@@ -1,5 +1,8 @@
 import { server } from '../mock-requests'
 import 'react-native-gesture-handler/jestSetup'
+import { load } from '@expo/env'
+
+load(process.cwd(), { silent: true })
 
 jest.mock('expo-font', () => {
   const module: typeof import('expo-font') = {
@@ -9,11 +12,6 @@ jest.mock('expo-font', () => {
 
   return module
 })
-
-jest.mock('@constants', () => ({
-  ...jest.requireActual('@constants'),
-  EXPO_PUBLIC_API_URL: 'https://www.test.com.br',
-}))
 
 beforeAll(() => server.listen())
 
