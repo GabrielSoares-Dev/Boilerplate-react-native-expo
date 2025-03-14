@@ -8,7 +8,7 @@ module.exports = {
         '**/*.{ts,tsx}',
         '!**/node_modules/**',
         '!**/app/**',
-        '!**/components/types/**',
+        '!**/constants/**',
         '!**/providers/root-provider/**',
         '!**/providers/types/**',
         '!**/tests/**',

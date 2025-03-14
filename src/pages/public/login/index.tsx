@@ -3,7 +3,6 @@ import { useLogin } from '@pages/public/login/hooks'
 import Icon from '@expo/vector-icons/Feather'
 import type { LoginFields } from '@pages/public/login/types'
 import * as S from './styles'
-import { API_URL } from '@constants'
 
 export function Login() {
   const {
@@ -14,11 +13,9 @@ export function Login() {
     handleSubmit,
     onSubmit,
   } = useLogin()
-  console.log(API_URL)
 
   return (
     <S.Container>
-      <S.Title>{API_URL || 'NAO ROLOU'}</S.Title>
       <S.Title>Login</S.Title>
       <Input<LoginFields>
         label={<InputLabel label="E-mail" />}
