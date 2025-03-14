@@ -79,4 +79,6 @@ npm run web
 - **`npm run lint:fix`**: Automatically fixes linting issues.
 - **`npm run test`**: Runs unit tests using Jest.
 - **`npm run test:coverage`**: Runs tests and generates a coverage report.
-- **`npm run test:coverage:silent`**: Runs tests and generates a coverage re
+- **`npm run test:coverage:silent`**: Runs tests and generates a coverage report
+
+### By Gabriel Soares Maciel
