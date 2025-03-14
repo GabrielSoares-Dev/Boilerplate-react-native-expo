@@ -1,8 +1,7 @@
 import axios from 'axios'
+import { API_URL } from '@constants'
 
-const envTest = process.env
-console.log(envTest)
 export const api = axios.create({
-  baseURL: process.env.EXPO_PUBLIC_API_URL,
+  baseURL: API_URL,
   timeout: 15000, // fifteen seconds
 })
